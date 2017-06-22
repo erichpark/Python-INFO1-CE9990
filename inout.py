@@ -49,13 +49,13 @@ while True:
         riders = 0
         print("The number of riders will default to 0.")
 
-    hours = (delays * minutes) * (riders) / 60 
+    hours = delays * minutes * riders / 60 
 
     if hours == 1:
-        print("That's ", int(hours), " hour of lost productivity in NYC. Hooray!", sep = "")
+        print("That's", int(hours), "hour of lost productivity in NYC. Hooray!")
 
     else:
-        print("That's ", int(hours), " hours of lost productivity in NYC. Hooray!", sep = "")
+        print("That's", int(hours), "hours of lost productivity in NYC. Hooray!")
 
     print() #Skip a line
 
