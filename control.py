@@ -21,9 +21,9 @@ while True:
     try:
         lunch = int(lunch)
     except ValueError:
-        print("Sorry,", s, "is not a whole number.")
+        print("Sorry,", lunch, "is not a whole number.")
         lunch = 0
-        print("The number of students will default to 0.")
+        print("The number of students will default to ", lunch, ".", sep ="")
 
     try:
         nolunch = input("Enter the number of students in your school who do NOT qualify for free or reduced lunch: ")
@@ -33,9 +33,9 @@ while True:
     try:
         nolunch = int(nolunch)
     except ValueError:
-        print("Sorry,", s, "is not a whole number.")
+        print("Sorry,", nolunch, "is not a whole number.")
         nolunch = 0
-        print("The number of students will default to 0.")
+        print("The number of students will default to ", nolunch, ".", sep ="")
 
     print() #Skip a line
 
@@ -48,10 +48,15 @@ while True:
     povertyrate = lunch / total	    #povertyrate represents the poverty rate of students at a school.
 
     if povertyrate > .75:
-        print("More than 75% of your students qualify for free or reduced lunch. According to the federal government, this statistic defines your school as a high-poverty school.")
+        print("More than 75% of your students qualify for free or reduced lunch. " \
+              "According to the federal government, " \
+              "this statistic defines your school as a high-poverty school.")
 
     else:
-        print("According to the federal government, your school does not meet the threshold of students qualifying for free or reduced lunch and is therefore NOT defined as a high-poverty school.")
+        print("According to the federal government, " \
+              "your school does not meet the threshold of students " \
+              "qualifying for free or reduced lunch and is therefore " \
+              "NOT defined as a high-poverty school.")
 	
     print() #Skip a line
 
