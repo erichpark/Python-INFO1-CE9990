@@ -1,5 +1,5 @@
 """
-graphpaper.py
+graphpaper2.py
 
 Eric Park
 INFO1-CE9990 Section 2
