@@ -62,14 +62,14 @@ while True:
     a = 1
     while a <= rows:
         b = 1
-        while b <= rspace:
-            print("+", rspace * "-", sep = "", end = "")
-            b += 1
+        while b <= columns:
+            print("+", cspace * "-", sep = "", end = "")
+            b += 1          
         print("+") 
         c = 1
-        while c <= columns:
+        while c <= rspace:
             d = 1
-            while d <= cspace:
+            while d <= columns:
                 print("|", cspace * " ", sep = "", end = "")
                 d += 1  
             c += 1 
@@ -78,11 +78,11 @@ while True:
     a = 1
     while a <= rows:
         b = 1
-        while b <= rspace:
-            print("+", rspace * "-", sep = "", end = "")
+        while b <= columns:
+            print("+", cspace * "-", sep = "", end = "")
             b += 1
         print("+")
-        a += rows
+        a += rows    
     print() #Skip a line
 
 sys.exit(0)
