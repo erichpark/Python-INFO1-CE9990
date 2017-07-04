@@ -61,17 +61,11 @@ while True:
 
     a = 1
     while a <= rows:
+        print(columns * ("+" + cspace * "-") + "+")
         b = 1
-        while b <= columns:
-            print(columns * ("+" + cspace * "-") + "+")
+        while b <= rspace:
+            print(columns * ("|" + cspace * " ") + "|") 
             b += 1
-        c = 1
-        while c <= rspace:
-            d = 1
-            while d <= columns:
-                print(columns * ("|" + cspace * " ") + "|") 
-                d += 1
-            c += 1
         a += 1    
     print(columns * ("+" + cspace * "-") + "+")    
 
