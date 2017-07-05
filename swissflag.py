@@ -40,7 +40,7 @@ while y <= height:
     x = 0
     while x <= width:
 
-        if x <= width and y <= height * 6/32:
+        if y <= height * 6/32:
             drawPixel(x, y, SwissRed)
         elif x <= width * 13/32 and height * 6/32 <= y <= height * 13/32:
             drawPixel(x, y, SwissRed)
@@ -54,7 +54,7 @@ while y <= height:
             drawPixel(x, y, SwissRed)
         elif x >= width * 19/32 and height * 19/32 <= y <= height * 26/32:
             drawPixel(x, y, SwissRed)
-        elif x <= width and y >= height * 26/32:
+        elif y >= height * 26/32:
             drawPixel(x, y, SwissRed)           
             
         x += 1
