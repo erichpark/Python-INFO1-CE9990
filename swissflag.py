@@ -15,7 +15,6 @@ import tkinter
 root = tkinter.Tk()
 root.title("Flag of Switzerland")
 
-
 #dimensions of flag, in pixels
 height = 400  
 width = 400
