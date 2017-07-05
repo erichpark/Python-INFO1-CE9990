@@ -35,29 +35,27 @@ def drawPixel(x, y, color):
     canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = color)
 
 y = 0
-while y < height:
+while y <= height:
 
     x = 0
-    while x < width:
+    while x <= width:
 
-        if x < width and y <= height * 6/32:
+        if x <= width and y <= height * 6/32:
             drawPixel(x, y, SwissRed)
-        elif x < width * 13/32 and height * 6/32 < y < height * 13/32:
+        elif x <= width * 13/32 and height * 6/32 <= y <= height * 13/32:
             drawPixel(x, y, SwissRed)
-        elif x > width * 19/32 and height * 6/32 < y < height * 13/32:
+        elif x >= width * 19/32 and height * 6/32 <= y <= height * 13/32:
             drawPixel(x, y, SwissRed)
-        elif x < width * 6/32 and height * 13/32 < y < height * 19/32:
+        elif x <= width * 6/32 and height * 13/32 <= y <= height * 19/32:
             drawPixel(x, y, SwissRed)
-        elif x > width * 26/32 and height * 13/32 < y < height * 19/32:
+        elif x >= width * 26/32 and height * 13/32 <= y <= height * 19/32:
             drawPixel(x, y, SwissRed)
-        elif x < width * 13/32 and height * 19/32 < y < height * 26/32:
+        elif x <= width * 13/32 and height * 19/32 <= y <= height * 26/32:
             drawPixel(x, y, SwissRed)
-        elif x > width * 19/32 and height * 19/32 < y < height * 26/32:
+        elif x >= width * 19/32 and height * 19/32 <= y <= height * 26/32:
             drawPixel(x, y, SwissRed)
-        elif x < width and y >= height * 26/32:
-            drawPixel(x, y, SwissRed)
-        else:
-            drawPixel(x, y, SwissWhite)            
+        elif x <= width and y >= height * 26/32:
+            drawPixel(x, y, SwissRed)           
             
         x += 1
     y += 1
