@@ -25,7 +25,7 @@ SwissRed    = "#FF0000"
 SwissWhite  = "#FFFFFF"
 
 canvas = tkinter.Canvas(root, highlightthickness = 0,
-    background = SwissWhite)
+    background = SwissRed)
 
 def drawPixel(x, y, color):
     """
@@ -40,22 +40,10 @@ while y <= height:
     x = 0
     while x <= width:
 
-        if y <= height * 6/32:
-            drawPixel(x, y, SwissRed)
-        elif x <= width * 13/32 and height * 6/32 <= y <= height * 13/32:
-            drawPixel(x, y, SwissRed)
-        elif x >= width * 19/32 and height * 6/32 <= y <= height * 13/32:
-            drawPixel(x, y, SwissRed)
-        elif x <= width * 6/32 and height * 13/32 <= y <= height * 19/32:
-            drawPixel(x, y, SwissRed)
-        elif x >= width * 26/32 and height * 13/32 <= y <= height * 19/32:
-            drawPixel(x, y, SwissRed)
-        elif x <= width * 13/32 and height * 19/32 <= y <= height * 26/32:
-            drawPixel(x, y, SwissRed)
-        elif x >= width * 19/32 and height * 19/32 <= y <= height * 26/32:
-            drawPixel(x, y, SwissRed)
-        elif y >= height * 26/32:
-            drawPixel(x, y, SwissRed)           
+        #If this point is within the vertical bar or within the horizontal bar,
+        if width * 13/32 <= x and x <= width * 19/32 and height * 6/32 <= y and y <= height * 26/32 \
+        or width * 6/32 <= x and x <= width * 26/32 and height *13/32 <= y and y <= height * 19/32:
+            drawPixel(x, y, SwissWhite)         
             
         x += 1
     y += 1
