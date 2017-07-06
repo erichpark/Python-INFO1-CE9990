@@ -34,18 +34,12 @@ def drawPixel(x, y, color):
     assert isinstance(x, int) and isinstance(y, int) and isinstance(color, str)
     canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = color)
 
-y = 0
-while y <= height:
-
-    x = 0
-    while x <= width:
+for y in range(height):
+    for x in range(width):
 
         #If this point is within the vertical bar or within the horizontal bar,
         if width * 13/32 <= x and x <= width * 19/32 and height * 6/32 <= y and y <= height * 26/32 \
         or width * 6/32 <= x and x <= width * 26/32 and height *13/32 <= y and y <= height * 19/32:
             drawPixel(x, y, SwissWhite)         
-            
-        x += 1
-    y += 1
 
 canvas.pack(expand = tkinter.YES, fill = "both")
