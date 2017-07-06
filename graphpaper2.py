@@ -59,14 +59,10 @@ while True:
         cspace = 0
         print("The number will default to 0.")
 
-    a = 1
-    while a <= rows:
+    for a in range(rows):
         print(columns * ("+" + cspace * "-") + "+")
-        b = 1
-        while b <= rspace:
+        for b in range(rspace):
             print(columns * ("|" + cspace * " ") + "|") 
-            b += 1
-        a += 1    
     print(columns * ("+" + cspace * "-") + "+")    
 
     print() #Skip a line
