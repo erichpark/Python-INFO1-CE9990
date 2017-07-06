@@ -21,8 +21,9 @@ while True:
     try:
         language = int(language)
     except ValueError:
-        print("Sorry, your selection is not valid. Please try again.")
-
+        print("Sorry,", language, "is not an integer. Please try again.")
+        print()
+        continue #Go back up to the word "while"
 
     try:
         order = input("Enter '1' for ascending order or '2' for descending order: ")
@@ -32,11 +33,18 @@ while True:
     try:
         order = int(order)
     except ValueError:
-        print("Sorry, your selection is not valid. Please try again.")
+        print("Sorry,", order, "is not an integer. Please try again.")
+        print()
+        continue #Go back up to the word "while"
 
     print() #Skip a line
 
-    if language == 1 and order == 1:
+    if language != 1 and order == 2 \
+    and language != 2 and order == 2:   
+        for i in range(10, 0, -1):
+            print (i)   
+
+    elif language == 1 and order == 1:
         print(1 , " ichi  (いち)")
         print(2 , " ni    (に)")
         print(3 , " san   (さん)")
@@ -83,7 +91,7 @@ while True:
         print(3 , " tree        (Три)")
         print(2 , " dva         (Два)")
         print(1 , " a-deen      (Один)")
-        
+
     else:
         for i in range(1, 11):
             print(i)
