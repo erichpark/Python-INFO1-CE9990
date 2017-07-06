@@ -39,12 +39,7 @@ while True:
 
     print() #Skip a line
 
-    if language != 1 and order == 2 \
-    and language != 2 and order == 2:   
-        for i in range(10, 0, -1):
-            print (i)   
-
-    elif language == 1 and order == 1:
+    if language == 1 and order == 1:
         print(1 , " ichi  (いち)")
         print(2 , " ni    (に)")
         print(3 , " san   (さん)")
@@ -92,6 +87,10 @@ while True:
         print(2 , " dva         (Два)")
         print(1 , " a-deen      (Один)")
 
+    elif language != 1 and order == 2 \
+    and language != 2 and order == 2:   
+        for i in range(10, 0, -1):
+            print (i)   
     else:
         for i in range(1, 11):
             print(i)
