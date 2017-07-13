@@ -34,8 +34,7 @@ while outer <= 12:
 
     inner = 1
     while inner <= 12:
-        for s in order:
-            print(s)
+        print(order)
         inner +=1
 
     outer += 1
