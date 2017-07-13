@@ -13,31 +13,51 @@ import sys
 
 lyrics = [
     "My true love gave to me",
-    "Twelve drummers drumming",
-    "Eleven pipers piping",
-    "Ten lords a-leaping",
-    "Nine ladies dancing",
-    "Eight maids a-milking",
-    "Seven swans a-swimming",
-    "Six geese a-laying",
-    "Five Golden Rings",
-    "Four colly birds",
-    "Three French hens",
     "Two turtledoves",
+    "Three French hens",
+    "Four colly birds",
+    "Five Golden Rings",
+    "Six geese a-laying",
+    "Seven swans a-swimming",
+    "Eight maids a-milking",
+    "Nine ladies dancing",
+    "Ten lords a-leaping",
+    "Eleven pipers piping",
+    "Twelve drummers drumming",
     "And a partridge in a pair tree."
 ]
 
-order = [lyrics - 1];
+n = len(lyrics)
 
-outer = 1
-while outer <= 12:
+print("On the 1st day of Christmas")
+for i in range(1):
+    print(lyrics[i])
+print("A partridge in a pair tree.")
 
-    inner = 1
-    while inner <= 12:
-        print(order)
-        inner +=1
+print()
 
-    outer += 1
+print("On the 2nd day of Christmas")
+for i in range(1):
+    print(lyrics[i])
+for i in range(1, 0, -1):
+    print(lyrics[i])
+for i in range(12, 11, -1):
+    print(lyrics[i])
 
+print()
+
+print("On the 3rd day of Christmas")
+for i in range(1):
+    print(lyrics[i])
+for i in range(1, 0, -1):
+    print(lyrics[i])
+for i in range(2, 1, -1):
+    print(lyrics[i])
+for i in range(12, 11, -1):
+    print(lyrics[i])
+
+print()
+
+    
 sys.exit(0)
 
