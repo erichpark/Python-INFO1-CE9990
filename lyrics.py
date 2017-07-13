@@ -37,9 +37,7 @@ print("A partridge in a pair tree.")
 print()
 
 print("On the 2nd day of Christmas")
-for i in range(1):
-    print(lyrics[i])
-for i in range(1, 0, -1):
+for i in range(2):
     print(lyrics[i])
 for i in range(12, 11, -1):
     print(lyrics[i])
@@ -47,11 +45,7 @@ for i in range(12, 11, -1):
 print()
 
 print("On the 3rd day of Christmas")
-for i in range(1):
-    print(lyrics[i])
-for i in range(1, 0, -1):
-    print(lyrics[i])
-for i in range(2, 1, -1):
+for i in range(3):
     print(lyrics[i])
 for i in range(12, 11, -1):
     print(lyrics[i])
