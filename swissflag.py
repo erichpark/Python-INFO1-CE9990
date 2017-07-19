@@ -43,3 +43,6 @@ for y in range(height):
             drawPixel(x, y, SwissWhite)         
 
 canvas.pack(expand = tkinter.YES, fill = "both")
+
+sys.exit(0)
+
