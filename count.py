@@ -100,3 +100,5 @@ while True:
         print(s)
 
     print() #Skip a line
+    
+sys.exit(0)
