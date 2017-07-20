@@ -167,10 +167,10 @@ while True:
 Title: {}
 Year: {}
 Box office: ${:,.2f}
-Starring:"""
+Starring: """
         
         for movie in Connery:
-            print(f.format(movie[0], movie[1], movie[2]))
+            print(f.format(movie[0], movie[1], movie[2]), end = "")
             stars = movie[3]
 
             for i, star in enumerate(stars):
@@ -187,10 +187,10 @@ Starring:"""
 Title: {}
 Year: {}
 Box office: ${:,.2f}
-Starring:"""
+Starring: """
         
         for movie in Niven:
-            print(f.format(movie[0], movie[1], movie[2]))
+            print(f.format(movie[0], movie[1], movie[2]), end = "")
             stars = movie[3]
 
             for i, star in enumerate(stars):
@@ -207,10 +207,10 @@ Starring:"""
 Title: {}
 Year: {}
 Box office: ${:,.2f}
-Starring:"""
+Starring: """
         
         for movie in Lazenby:
-            print(f.format(movie[0], movie[1], movie[2]))
+            print(f.format(movie[0], movie[1], movie[2]), end = "")
             stars = movie[3]
 
             for i, star in enumerate(stars):
@@ -227,10 +227,10 @@ Starring:"""
 Title: {}
 Year: {}
 Box office: ${:,.2f}
-Starring:"""
+Starring: """
         
         for movie in Moore:
-            print(f.format(movie[0], movie[1], movie[2]))
+            print(f.format(movie[0], movie[1], movie[2]), end = "")
             stars = movie[3]
 
             for i, star in enumerate(stars):
@@ -246,10 +246,10 @@ Starring:"""
 Title: {}
 Year: {}
 Box office: ${:,.2f}
-Starring:"""
+Starring: """
         
         for movie in Dalton:
-            print(f.format(movie[0], movie[1], movie[2]))
+            print(f.format(movie[0], movie[1], movie[2]), end = "")
             stars = movie[3]
 
             for i, star in enumerate(stars):
@@ -266,10 +266,10 @@ Starring:"""
 Title: {}
 Year: {}
 Box office: ${:,.2f}
-Starring:"""
+Starring: """
         
         for movie in Brosnan:
-            print(f.format(movie[0], movie[1], movie[2]))
+            print(f.format(movie[0], movie[1], movie[2]), end = "")
             stars = movie[3]
 
             for i, star in enumerate(stars):
@@ -286,10 +286,10 @@ Starring:"""
 Title: {}
 Year: {}
 Box office: ${:,.2f}
-Starring:"""
+Starring: """
         
         for movie in Craig:
-            print(f.format(movie[0], movie[1], movie[2]))
+            print(f.format(movie[0], movie[1], movie[2]), end = "")
             stars = movie[3]
 
             for i, star in enumerate(stars):
