@@ -24,6 +24,15 @@ except urllib.error.URLError as error:
     print("urllib.error.URLError", error)
     sys.exit(1)
 
+def score(line):
+    """
+    Return the line's datestamp, but with the format changed from "12/31/2017"
+    to "2017/12/31".  That makes alphabetical order the same as chronological
+    order.
+    """
+    fields = line[8].split("/")
+    return fields[2] + "/" + fields[0] + "/" + fields[1]
+
 brooklynLines = []                   #Start with an empty list.
 
 for line in lines:
@@ -33,20 +42,9 @@ for line in lines:
         print(unicodeError)
         sys.exit(1)
 
-    def score(line):
-        """
-        Return the line's datestamp, but with the format changed from "12/31/2017"
-        to "2017/12/31".  That makes alphabetical order the same as chronological
-        order.
-        """
-        fields = line[8].split("/")
-        return fields[2] + "/" + fields[0] + "/" + fields[1]
-
-    brooklynLines.sort(key = score)
-
     r = csv.reader([s])                           #[s] is a list containing one string
     fields = next(r)                              #fields is a list of strings    
-    if fields[5] == "11211" and fields[14] == "A" and score(fields[8]) >= "2017/01/01": #Zip code for Williamsburg; Inspection Grade of 'A'; Inspection Date in 2017 
+    if fields[5] == "11211" and fields[14] == "A" and score(fields) >= "2017/01/01": #Zip code for Williamsburg; Inspection Grade of 'A'; Inspection Date in 2017 
         brooklynLines.append(fields)
 
 lines.close()
