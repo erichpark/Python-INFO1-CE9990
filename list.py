@@ -191,6 +191,5 @@ while True:
                 print(star, end = ",") #the other stars
             print() #Skip a line
 
-
 sys.exit(0)
 
