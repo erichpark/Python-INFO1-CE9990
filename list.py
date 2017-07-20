@@ -44,7 +44,7 @@ Connery = [
 
 Niven = [
      ["Casino Royale",                          1967,  41_700_000.00,
-        ["Peter Sellers", "Ursula Andress", "David Niven", "Woody Allen", "Joanna Pettet", "Orson Welles", "Daliah Lavi"]
+        ["David Niven", "Peter Sellers", "Ursula Andress", "Woody Allen", "Joanna Pettet", "Orson Welles", "Daliah Lavi"]
      ]
 ]
 
@@ -135,11 +135,31 @@ Craig = [
      ]
 ]
 
+bonds = [
+    Connery, #0
+    Niven,   #1
+    Lazenby, #2
+    Moore,   #3
+    Dalton,  #4
+    Brosnan, #5
+    Craig,   #6
+]
+
+print("Enter")
+for i, bond in enumerate(bonds):
+    print("'", i, "' ", "for ", bond[0][3][0], sep = "")
+
+f = """\
+Title: {}
+Year: {}
+Box office: ${:,.2f}
+Starring: """
+
 while True:
 
     while True:
         try:
-            actor = input("Enter '0' for Sean Connery, '1' for David Niven, '2' for George Lazenby,'3' for Roger Moore, '4' for Timothy Dalton, '5' for Pierce Brosnan, or '6' for Daniel Craig: ")
+            actor = input()
         except EOFError:
             sys.exit(0)
 
@@ -149,157 +169,28 @@ while True:
             print()
             print("Sorry,", actor, "is not a valid selection. Please try again.")
             print()
-            continue   #Go back up to the word "while"
+            continue   #Go back up to the second "while"
 
-        if actor == 0 or actor == 1 or actor == 2 or actor == 3 or actor == 4 or actor == 5 or actor == 6:
+        if 0 <= actor and actor < len(bonds):
             break;
 
-        else:
-            print()
-            print("Sorry,", actor, "is not a valid selection. Please try again.")
-            print()
+        print()
+        print("Sorry,", actor, "is not a valid selection. Please try again.")
+        print()
 
     print() #Skip a line
 
-    if actor == 0:
+    for movie in bonds[actor]:
+        print(f.format(movie[0], movie[1], movie[2]), end = "")
+        stars = movie[3]
 
-        f = """\
-Title: {}
-Year: {}
-Box office: ${:,.2f}
-Starring: """
-        
-        for movie in Connery:
-            print(f.format(movie[0], movie[1], movie[2]), end = "")
-            stars = movie[3]
-
-            for i, star in enumerate(stars):
-                if i == len(stars) - 1:
-                    print(star)             #the last star
-                else:
-                    print(star, end = ", ") #the other stars
+        for i, star in enumerate(stars):
+            if i == len(stars) - 1:
+                print(star)             #the last star
+            else:
+                print(star, end = ",") #the other stars
             print() #Skip a line
 
-
-    if actor == 1:
-
-        f = """\
-Title: {}
-Year: {}
-Box office: ${:,.2f}
-Starring: """
-        
-        for movie in Niven:
-            print(f.format(movie[0], movie[1], movie[2]), end = "")
-            stars = movie[3]
-
-            for i, star in enumerate(stars):
-                if i == len(stars) - 1:
-                    print(star)             #the last star
-                else:
-                    print(star, end = ", ") #the other stars
-            print() #Skip a line
-
-
-    if actor == 2:
-
-        f = """\
-Title: {}
-Year: {}
-Box office: ${:,.2f}
-Starring: """
-        
-        for movie in Lazenby:
-            print(f.format(movie[0], movie[1], movie[2]), end = "")
-            stars = movie[3]
-
-            for i, star in enumerate(stars):
-                if i == len(stars) - 1:
-                    print(star)             #the last star
-                else:
-                    print(star, end = ", ") #the other stars
-            print() #Skip a line
-
-
-    if actor == 3:
-
-        f = """\
-Title: {}
-Year: {}
-Box office: ${:,.2f}
-Starring: """
-        
-        for movie in Moore:
-            print(f.format(movie[0], movie[1], movie[2]), end = "")
-            stars = movie[3]
-
-            for i, star in enumerate(stars):
-                if i == len(stars) - 1:
-                    print(star)             #the last star
-                else:
-                    print(star, end = ", ") #the other stars
-            print() #Skip a line
-
-    if actor == 4:
-
-        f = """\
-Title: {}
-Year: {}
-Box office: ${:,.2f}
-Starring: """
-        
-        for movie in Dalton:
-            print(f.format(movie[0], movie[1], movie[2]), end = "")
-            stars = movie[3]
-
-            for i, star in enumerate(stars):
-                if i == len(stars) - 1:
-                    print(star)             #the last star
-                else:
-                    print(star, end = ", ") #the other stars
-            print() #Skip a line
-
-
-    if actor == 5:
-
-        f = """\
-Title: {}
-Year: {}
-Box office: ${:,.2f}
-Starring: """
-        
-        for movie in Brosnan:
-            print(f.format(movie[0], movie[1], movie[2]), end = "")
-            stars = movie[3]
-
-            for i, star in enumerate(stars):
-                if i == len(stars) - 1:
-                    print(star)             #the last star
-                else:
-                    print(star, end = ", ") #the other stars
-            print() #Skip a line
-
-
-    if actor == 6:
-
-        f = """\
-Title: {}
-Year: {}
-Box office: ${:,.2f}
-Starring: """
-        
-        for movie in Craig:
-            print(f.format(movie[0], movie[1], movie[2]), end = "")
-            stars = movie[3]
-
-            for i, star in enumerate(stars):
-                if i == len(stars) - 1:
-                    print(star)             #the last star
-                else:
-                    print(star, end = ", ") #the other stars
-            print() #Skip a line
-
-        print() #Skip a line
 
 sys.exit(0)
 
