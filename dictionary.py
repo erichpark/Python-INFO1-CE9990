@@ -59,20 +59,20 @@ while True:
         print("The", definition)
         print()
 
+        break;
+
     while True:
         try:
             richer = input("Would you like to see which families have more Benjamins? (Y/N)")
         except EOFError:
             sys.exit(0)
-
-        try:
-            richer = str(richer)           
         if rank == families[1] and richer == str(Y):
             print("No one else stands above the Waltons.")
         elif richer == str(Y):
             i = 0
             for i, c in enumerate(definition):
-                print(i, c)
+                print(i, c)     
+
             
             
     
