@@ -69,16 +69,14 @@ while True:
 
         Y = "Yes"
         N = "No"
-        if families[rank] == 1 and richer == Y:
-            break;
-        print()
-        print("No one else ranks above the Waltons.")
-        print()
+        
+        if families[rank] == 1 and richer == Y:           
+            print()
+            print("No one else ranks above the Waltons.")
+            print()
+        break;
 
-        else:
-        print()
-        print("OK")
-        print()
+
 
      
 
