@@ -40,50 +40,22 @@ families = {
 } 
 
 while True:
-    
-    while True:
-        try:
-            rank = input("Please select a rank from 1 to 25: ")
-        except EOFError:
-            sys.exit(0)
+    try:
+        rank = input("Please select a rank from 1 to 25: ")
+    except EOFError:
+        sys.exit(0)
 
-        try:
-            definition = families[rank]
-        except KeyError:
-            print()
-            print("Sorry,", rank, "is not a valid selection. Please try again.")
-            print()
-            continue   #Go back up to the second "while"
-
+    try:
+        definition = families[rank]
+    except KeyError:
         print()
-        print("The", definition)
+        print("Sorry,", rank, "is not a valid selection. Please try again.")
         print()
+        continue   #Go back up to "while"
 
-        break;
-
-    while True:
-        try:
-            richer = input("Would you like to see which families have more Benjamins? (Y/N) ")
-        except EOFError:
-            sys.exit(0)
-
-        Y = "Yes"
-        N = "No"
-        
-        if families[rank] == 1 and richer == Y:           
-            print()
-            print("No one else ranks above the Waltons.")
-            print()
-        break;
-
-
-
-     
-
-        
-
-            
-            
+    print()
+    print("The", definition)
+    print() 
     
 sys.exit(0)
 
